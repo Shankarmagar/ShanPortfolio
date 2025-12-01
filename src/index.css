@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 14%;
+    --foreground: 60 5% 90%;
+
+    --card: 220 24% 16%;
+    --card-foreground: 60 5% 90%;
+
+    --popover: 220 26% 14%;
+    --popover-foreground: 60 5% 90%;
+
+    --primary: 43 96% 56%;
+    --primary-foreground: 220 26% 14%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 60 5% 90%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 60 5% 70%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 220 26% 14%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 5% 90%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 43 96% 56%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio colors */
+    --hero-gradient-start: 220 26% 14%;
+    --hero-gradient-end: 235 24% 20%;
+    --card-glow: 43 96% 56%;
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+* {
+    border: 0px solid hsl(var(--border));
+  }
+
+    body {
+      @apply bg-background text-foreground font-body;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply font-heading;
+    }
+  }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-amber-400 bg-clip-text text-transparent;
+  }
+
+  .card-glow {
+    box-shadow: 0 0 20px -5px hsl(var(--card-glow) / 0.3);
+  }
+
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-20;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
