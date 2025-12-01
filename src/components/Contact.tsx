@@ -4,8 +4,8 @@ import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 
 export const Contact = () => {
   const socialLinks = [
-    { icon: Github, label: "GitHub", href: "https://github.com" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+    { icon: Github, label: "GitHub", href: "https://github.com/Shankarmagar" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/shankar-magar-725b671b7/" },
     { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
   ];
 
